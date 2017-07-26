@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Username Validator</title>
+  </head>
+  <body>
+    <h2>The user name you have choosen, {{ ninja_name }}, is honorable.</h2>
+    <h1> Welcome to The Coding Dojo.</h1>
+    <h2>Usernames entered:</h2>
+    {% for ninja in ninjas %}
+    <p>{{ ninja.user_name }}    {{ ninja.created_at }}</p>
+    {% endfor %}
+  </body>
+</html>

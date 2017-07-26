@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Username Validator</title>
+  </head>
+  <body>
+    <h1>The Dojo Life</h1>
+    {% if fail %}
+    <p>{{ fail }} is not a user name worthy of a Ninja!</p>
+    {% endif %}
+    <form action='add_username' method='post'>
+      {% csrf_token %}
+      <label>Username:</label>
+      <input type='text' name='username'>
+      <input type='submit' value='Submit'>
+    </form>
+  </body>
+</html>
