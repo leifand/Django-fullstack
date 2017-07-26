@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Login and Registration</title>
+  </head>
+  <body>
+    <h1>Registration</h1>
+    <form action='/register' method='post'>
+      {% csrf_token %}
+      <label>First Name:</label>
+      <input type='text' name='fname'>
+      <label>Last Name:</label>
+      <input type='text' name='lname'>
+      <label>Email:</label>
+      <input type='email' name='email'>
+      <!--label>Birthday:</label>
+      <input type='date' name='bday'-->
+      <label>Password:</label>
+      <input type='password' name='pword'>
+      <label>Confirm Password:</label>
+      <input type='password' name='cword'>
+      <input type='submit' value='Register'>
+    </form>
+    <h1>Login</h1>
+    <form action='/login' method='post'>
+      {% csrf_token %}
+      <label>Email:</label>
+      <input type='email' name='email'>
+      <label>Password:</label>
+      <input type='password' name='pword'>
+      <input type='submit' value='Login'>
+    </form>
+  </body>
+</html>
